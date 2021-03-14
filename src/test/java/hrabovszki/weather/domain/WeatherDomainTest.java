@@ -18,9 +18,6 @@ class WeatherDomainTest {
     void shouldFormatWeather() {
         Weather weather = new Weather("Szeged", TEN);
 
-        Assertions.assertThat(weather.formatted()).isEqualTo("""
-                city: Szeged
-                temperature: 10
-                """);
+        Assertions.assertThat(weather.formatted()).isEqualTo("city: Szeged,temperature: 10");
     }
 }

@@ -3,12 +3,24 @@ package hrabovszki.weather.domain;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class WeatherDomainTest {
+import static java.math.BigDecimal.TEN;
+
+class WeatherDomainTest {
 
     @Test
-    public void shouldPass() {
-        Weather weather = new Weather("Szeged");
+    void shouldPass() {
+        Weather weather = new Weather("Szeged", TEN);
 
-        Assertions.assertThat(weather.city()).isEqualTo("Szeged");
+        Assertions.assertThat(weather.city()).isEqualTo("Szeged", TEN);
+    }
+
+    @Test
+    void shouldFormatWeather() {
+        Weather weather = new Weather("Szeged", TEN);
+
+        Assertions.assertThat(weather.formatted()).isEqualTo("""
+                city: Szeged
+                temperature: 10
+                """);
     }
 }

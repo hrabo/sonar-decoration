@@ -33,6 +33,6 @@ class WeatherDomainTest {
     void shouldNotBeEqual() {
         Weather szeged = new Weather("Szeged", TEN);
         Weather szeged2 = new Weather("Szeged", ONE);
-        assertThat(szeged.equals(szeged2)).isTrue();
+        assertThat(szeged.equals(szeged2)).isFalse();
     }
 }

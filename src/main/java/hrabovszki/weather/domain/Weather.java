@@ -37,12 +37,4 @@ public final class Weather {
     public int hashCode() {
         return Objects.hash(city, temperature);
     }
-
-    @Override
-    public String toString() {
-        return "Weather[" +
-                "city=" + city + ", " +
-                "temperature=" + temperature + ']';
-    }
-
 }

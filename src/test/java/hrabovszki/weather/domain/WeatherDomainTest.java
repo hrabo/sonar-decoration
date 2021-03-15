@@ -25,14 +25,14 @@ class WeatherDomainTest {
     void shouldBeEqual() {
         Weather szeged = new Weather("Szeged", TEN);
         Weather szeged2 = new Weather("Szeged", TEN);
-        assertThat(szeged.equals(szeged)).isEqualTo(true);
-        assertThat(szeged.equals(szeged2)).isEqualTo(true);
+        assertThat(szeged).isEqualTo(szeged);
+        assertThat(szeged).isEqualTo(szeged2);
     }
 
     @Test
     void shouldNotBeEqual() {
         Weather szeged = new Weather("Szeged", TEN);
         Weather szeged2 = new Weather("Szeged", ONE);
-        assertThat(szeged.equals(szeged2)).isEqualTo(false);
+        assertThat(szeged).isNotEqualTo(szeged2);
     }
 }

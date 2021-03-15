@@ -33,8 +33,4 @@ public final class Weather {
                 Objects.equals(this.temperature, that.temperature);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(city, temperature);
-    }
 }

@@ -1,1 +1,2 @@
-# spring-boot-demo
+# Weather Notification Application
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=hrabo_spring-boot-example&metric=alert_status)](https://sonarcloud.io/dashboard?id=hrabo_spring-boot-example)

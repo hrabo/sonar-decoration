@@ -23,18 +23,4 @@ public final class Weather {
     public BigDecimal temperature() {
         return temperature;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (Weather) obj;
-        return Objects.equals(this.city, that.city) &&
-                Objects.equals(this.temperature, that.temperature);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(city, temperature);
-    }
 }
